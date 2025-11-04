@@ -11,6 +11,6 @@ results = model.train(data="VisDrone.yaml", epochs=100, imgsz=640)
 results = model("images/img2.jpg", save=True) # return a Result object
 """
 
-model = YOLO("yolo11n_visdrone.pt")
+model = YOLO("yolov8s.pt")
 #print("\nModel info:", model.info(), "\n\n") # Display model information
-results = model("images/", save=True)
+results = model("images/fire_and_smoke/fire-8/valid/images/", save=True)
