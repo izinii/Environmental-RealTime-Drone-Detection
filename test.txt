@@ -1,5 +1,0 @@
-images/D-Fire_dataset/
-images/D-Fire_dataset/test/
-images/D-Fire_dataset/train/
-images/drone/VisDrone/
-images/fire_and_smoke/fire-8/
