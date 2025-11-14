@@ -14,3 +14,5 @@ results = model("images/img2.jpg", save=True) # return a Result object
 model = YOLO("models/yolo11n_visdrone_FireAndSmoke.pt")
 #print("\nModel info:", model.info(), "\n\n") # Display model information
 results = model("images/D-Fire_dataset/selection/", save=True)
+
+tet
