@@ -1,6 +1,7 @@
 from numpy.typing import NDArray
 from typing import Dict, List
 from ultralytics import YOLO
+import cv2
 
 
 class ZoneDetection:
@@ -8,10 +9,11 @@ class ZoneDetection:
         # Load model from pt
         self.model = YOLO("models/yolo11n_D-Fire.pt")
 
-    def get_zones(self, img) -> List[Dict]:
+    def get_zones(self, img: NDArray) -> List[Dict]:
         """
         Params:
-        img: Input image as a JPG image
+        img: NDArray 
+            Input image as a numpy array.
 
         Returns:
         List[Dict]
@@ -41,6 +43,6 @@ class ZoneDetection:
         return parsed_results
 
 
-image = "D-Fire_dataset/test/images/WEB10490.jpg" # example
+image = cv2.imread("D-Fire_dataset/test/images/WEB10490.jpg")
 zone_detection = ZoneDetection()
 zone_detection.get_zones(image)
