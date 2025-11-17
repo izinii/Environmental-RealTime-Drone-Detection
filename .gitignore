@@ -1,9 +1,6 @@
 venv
 runs/
-images/D-Fire_dataset/test/
-images/D-Fire_dataset/train/
-images/drone/VisDrone/
-images/fire_and_smoke/fire-8/
+images/
 D-Fire_dataset/
 result_finetuing_D-Fire/
 D-Fire.zip
