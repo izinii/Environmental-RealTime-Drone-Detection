@@ -5,19 +5,20 @@ from ultralytics import YOLO
 model = YOLO("models/yolo11n.pt")  # load a pretrained model (recommended for training)
 
 # Train the model
-results = model.train(data="VisDrone.yaml", epochs=100, imgsz=640)
+results = model.train(data="utils_finetuning/data_visdrone.yaml", epochs=100, imgsz=640)
 """
+
 
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO('models/yolo11n.pt')  # load an official model
+model = YOLO('models/yolo11n_visdrone.pt')  # load an official model
 
-PROJECT = '/home/ilan/Hackathon/Drone-Defense-Hackathon/result_finetuing_D-Fire'  # project name
-NAME = 'experiment_name'  # run name
+PROJECT = '/home/ilan/Hackathon/Drone-Defense-Hackathon'  # project name
+NAME = 'result_finetuing_VisDrone_D-Fire'  # run name
 
 model.train(
-   data = 'data_D-Fire.yaml',
+   data = 'utils_finetuning/data_VisDrone_D-Fire.yaml',
    task = 'detect',
    epochs = 200,
    verbose = True,

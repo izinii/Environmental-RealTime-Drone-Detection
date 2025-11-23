@@ -1,10 +1,10 @@
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO("models/yolo11n_D-Fire.pt")
+model = YOLO("models/yolo11n_visdrone_D-Fire.pt")
 
 # Display model information
 #print("\nModel info:", model.info(), "\n\n") 
 
 # Run inference
-results = model("images/fire_and_smoke/fire-8/test/images/", save=True)
+results = model("D-Fire_dataset/test/images/", save=True)
