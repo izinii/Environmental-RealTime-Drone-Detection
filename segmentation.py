@@ -69,7 +69,7 @@ if not ret:
 
 img_size = (first_frame.shape[1], first_frame.shape[0])
 fourcc = cv2.VideoWriter_fourcc(*"mp4v")   # codec mp4
-output_path = "/datas02/t0323469/hackathon/final_output.mp4"
+output_path = "/datas02/t0323469/hackathon/final_video_10s.mp4"
 out_video = cv2.VideoWriter(output_path, fourcc, video_fps, img_size)
 
 # Remettre la première frame dans le buffer
