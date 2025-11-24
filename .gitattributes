@@ -2,3 +2,4 @@ models/model_fire_big.hdf5 filter=lfs diff=lfs merge=lfs -text
 models/model_smoke_big.hdf5 filter=lfs diff=lfs merge=lfs -text
 segmentation_data/video.mp4 filter=lfs diff=lfs merge=lfs -text
 segmentation_data/video_30s.mp4 filter=lfs diff=lfs merge=lfs -text
+segmentation_data/video_10s.mp4 filter=lfs diff=lfs merge=lfs -text
