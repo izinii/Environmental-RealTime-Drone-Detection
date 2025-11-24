@@ -38,9 +38,12 @@ class ZoneSegmentation:
         pred_smoke = self.do_inference(image, self.model_smoke)
         pred_smoke[pred_smoke<self.smoke_threshold]=0
         
+        print(pred_fire)
+        print("\n\n")
+        print(pred_smoke)
         return pred_fire, pred_smoke
 
 
-image = cv2.imread("segmentation_data/photo_test.jpg")   
+image = cv2.imread("03_0002.png")   
 zone_detection = ZoneSegmentation()
 zone_detection.get_zones(image)

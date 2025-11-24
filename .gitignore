@@ -1,7 +1,7 @@
 venv
 venv_tensorflow
 runs/
-images/
 D-Fire_dataset/
 feu_fumee/
 test/
+drone-object-detection/
