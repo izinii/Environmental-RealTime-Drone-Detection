@@ -3,5 +3,5 @@ venv_tensorflow
 runs/
 images/
 D-Fire_dataset/
-result_finetuing_D-Fire/
 feu_fumee/
+test/
