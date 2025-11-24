@@ -4,8 +4,8 @@ from tensorflow.keras.models import load_model
 
 class ZoneSegmentation:
     def __init__(self):
-        self.model_fire = load_model("feu_fumee/models/model_fire_big.hdf5")
-        self.model_smoke = load_model("feu_fumee/models/model_smoke_big.hdf5")
+        self.model_fire = load_model("models/model_fire_big.hdf5")
+        self.model_smoke = load_model("models/model_smoke_big.hdf5")
         self.fire_threshold = 0
         self.smoke_threshold = 0
 
@@ -41,6 +41,6 @@ class ZoneSegmentation:
         return pred_fire, pred_smoke
 
 
-image = cv2.imread("photo_test.jpg")   
+image = cv2.imread("segmentation_data/photo_test.jpg")   
 zone_detection = ZoneSegmentation()
 zone_detection.get_zones(image)
