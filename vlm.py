@@ -13,7 +13,7 @@ processor = AutoProcessor.from_pretrained(model_path)
 prompt = "Describe the image in one sentence maximum"
 
 # Load images
-image_path = "/home/ilan/Hackathon/Drone-Defense-Hackathon/test/17639990872259045.jpg"
+image_path = "/home/ilan/Hackathon/Drone-Defense-Hackathon/test/output_segmentation.jpg"
 image = Image.open(image_path).convert('RGB')
 
 # Load the YAML file & Extract the prompt text
