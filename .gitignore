@@ -1,6 +1,5 @@
 venv
 venv_tensorflow
 archive/
-dataset_fire/
 drone-object-detection/
 results_segmentation/
