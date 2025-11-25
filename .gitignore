@@ -2,4 +2,4 @@ venv
 venv_tensorflow
 dataset_fire/
 drone-object-detection/
-results_segmentatation/
+results_segmentation/
