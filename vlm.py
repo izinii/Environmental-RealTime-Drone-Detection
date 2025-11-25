@@ -10,16 +10,13 @@ model = AutoModelForVision2Seq.from_pretrained(model_path).to(device)
 processor = AutoProcessor.from_pretrained(model_path)
 
 # Define prompt
-prompt = "Describe the image in one sentence maximum"
-
-# Load images
-image_path = "/home/ilan/Hackathon/Drone-Defense-Hackathon/test/output_segmentation.jpg"
-image = Image.open(image_path).convert('RGB')
-
-# Load the YAML file & Extract the prompt text
 with open("prompts.yaml", "r") as f:
     data = yaml.safe_load(f)
 prompt_template = data["prompt_vlm"]
+
+# Load images
+image_path = "/home/ilan/Hackathon/Drone-Defense-Hackathon/test_detections/results/03_0002_tiles16_detected.png"
+image = Image.open(image_path).convert('RGB')
 
 
 def put_into_template(processor, prompt_text, pil_image):
