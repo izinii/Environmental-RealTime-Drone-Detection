@@ -4,7 +4,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 # Load the YAML file & Extract the prompt text
 with open("prompts.yaml", "r") as f:
     data = yaml.safe_load(f)
-prompt_template = data["prompt"]
+prompt_template = data["prompt_llm"]
 
 # Load model
 model_path = "/datas01/t0323469/checkpoints/Granite-4.0-micro"

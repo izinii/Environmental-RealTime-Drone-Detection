@@ -8,7 +8,7 @@ model_fire = load_model("models/model_fire_big.hdf5")
 fire_threshold = 0
 smoke_threshold = 0
 
-image = cv2.imread("03_0002.png")         
+image = cv2.imread("segmentation_data/photo_test.jpg")         
 img_size = (image.shape[1],image.shape[0])
 out = image.copy()
 
