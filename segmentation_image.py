@@ -8,7 +8,7 @@ model_fire = load_model("models/model_fire_big.hdf5")
 fire_threshold = 0
 smoke_threshold = 0
 
-image = cv2.imread("segmentation_data/photo_test.jpg")         
+image = cv2.imread("dataset_fire/DJI_0508.JPG")         
 img_size = (image.shape[1],image.shape[0])
 out = image.copy()
 
@@ -35,4 +35,4 @@ out[:, :, 0] = cv2.addWeighted(out[:, :, 0].astype('uint8'), 1.0,
                             cv2.resize((pred * 255).astype('uint8'), img_size).astype('uint8'), 1.0, 0)   
 
 #Save the output images in a directory
-cv2.imwrite("test/" + "output_segmentation" + ".jpg", out)
+cv2.imwrite("results_segmentation/" + "DJI_0508" + ".jpg", out)
