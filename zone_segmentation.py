@@ -38,12 +38,13 @@ class ZoneSegmentation:
         pred_smoke = self.do_inference(image, self.model_smoke)
         pred_smoke[pred_smoke<self.smoke_threshold]=0
         
-        print(pred_fire)
-        print("\n\n")
-        print(pred_smoke)
         return pred_fire, pred_smoke
 
 
-image = cv2.imread("03_0002.png")   
-zone_detection = ZoneSegmentation()
-zone_detection.get_zones(image)
+if __name__ == '__main__':
+    name = "DJI_0507_fired"
+    image = cv2.imread("dataset_fire/" + name + ".png")    
+    zone_detection = ZoneSegmentation()
+    pred_fire, pred_smoke = zone_detection.get_zones(image)
+    np.save("segmentation_pred/" + "fire_" + name + ".npy", pred_fire)
+    np.save("segmentation_pred/" + "smoke_" + name + ".npy", pred_smoke)
