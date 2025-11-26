@@ -3,6 +3,3 @@ venv_tensorflow
 archive/
 dataset_fire/
 results_segmentation/
-drone-object-detection/
-dataset_fire.zip
-segmentation_pred.zip
