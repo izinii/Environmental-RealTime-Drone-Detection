@@ -21,6 +21,7 @@ Clone the repo:
 git clone https://github.com/izinii/Environmental-RealTime-Drone-Detection.git
 cd Environmental-RealTime-Drone-Detection
 ```
+**Be carefull:** the repo contains some very large files. You might need to use Git LFS to clone/pull/push.
 
 Install python dependencies (we advise creating a virtual environment beforehand):
 ```bash
